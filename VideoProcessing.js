@@ -20,22 +20,6 @@ let hairSeedScale      = 1.3
 
 function startCamera() {
   if (streaming) return;
-  
-  // navigator.mediaDevices.enumerateDevices().then(function(devices) {
-  //   devices = devices.filter(function(devices) { return devices.kind === 'videoinput'; });
-  //   var videoinput_id = '';
-  //   devices.forEach(function(device) {
-  //       if(device.label.toLowerCase().search("front") > -1){
-  //            videoinput_id = device.deviceId;
-  //       }
-  //   });
-  //   if(videoinput_id != ''){
-  //       //navigator.mediaDevices.getUserMedia({ video: { deviceId: {'exact':videoinput_id}, facingMode: 'user' }}).then(successCallback);
-  //       navigator.mediaDevices.getUserMedia({ video: { deviceId: {'exact':videoinput_id}, facingMode: 'user' }}).then(successCallback);
-  //   }else{
-  //       navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' }}).then(successCallback);
-  //   }
-  // });
 
   navigator.mediaDevices.getUserMedia({ video: { width: 1280, height: 720 }, audio: false }).
   then(function (s) {
