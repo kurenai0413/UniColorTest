@@ -81,7 +81,6 @@ function startVideoProcessing() {
 }
 
 function processVideo() {
-  //stats.begin();
   canvasInputCtx.drawImage(video, 0, 0, videoWidth, videoHeight);
   let imageData = canvasInputCtx.getImageData(0, 0, videoWidth, videoHeight);
   srcMat.data.set(imageData.data);
@@ -113,7 +112,6 @@ function processVideo() {
   {
     drawResults(canvasOutputCtx, faces, 'red', size);
   }
-  //stats.end();
   requestAnimationFrame(processVideo);
 }
 
@@ -146,14 +144,12 @@ function stopCamera() {
 }
 
 function initUI() {
-  //stats = new Stats();
-  //stats.showPanel(0);
-  //document.getElementById('container').appendChild(stats.dom);
+
 }
 
 function opencvIsReady() {
   console.log('OpenCV.js is ready');
-  //initUI();
+  
   startCamera();
 }
       //# sourceURL=pen.js
