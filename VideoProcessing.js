@@ -180,5 +180,6 @@ function testColorValuePrint() {
   let greenValue = pixelValue[1];
   let blueValue  = pixelValue[2];
 
-  alert("Center value: " + redValue + ", " + greenValue + ", " + blueValue);
+  alert("Image center value: " + redValue + ", " + greenValue + ", " + blueValue + 
+        "\n Set color values: " + hairColorRed + ", " + hairColorGreen + ", " + hairColorBlue);
 }
