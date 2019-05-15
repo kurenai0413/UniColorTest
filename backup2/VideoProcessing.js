@@ -18,10 +18,6 @@ let lowerYPaddingScale = 0.15
 
 let hairSeedScale      = 1.3
 
-let hairColorRed       = 0;
-let hairColorGreen     = 0;
-let hairColorBlue      = 0;
-
 function startCamera() {
   if (streaming) return;
 
@@ -61,8 +57,6 @@ let canvasInputCtx = null;
 
 let canvasBuffer = null;
 let canvasBufferCtx = null;
-
-let srcMat = null;
 
 function startVideoProcessing() {
   if (!streaming) {console.warn("Please startup your webcam");return;}
@@ -158,21 +152,4 @@ function opencvIsReady() {
   
   startCamera();
 }
-
-function setHairColor(redValue, greenValue, blueValue) {
-  hairColorRed   = redValue;
-  hairColorGreen = greenValue;
-  hairColorBlue  = blueValue;
-
-  testColorValuePrint();
-}
-
-function testColorValuePrint() {
-  //alert(hairColorRed + ", " + hairColorGreen + ", " + hairColorBlue);
-  let pixelValue = srcMat.ucharptr(0, 0);
-  let redValue = pixelValue[0];
-  let greenValue = pixelValue[1];
-  let blueValue = pixelValue[2];
-
-  alert(redValue + ", " + greenValue + ", " + blueValue);
-}
+      //# sourceURL=pen.js

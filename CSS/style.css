@@ -1,0 +1,64 @@
+canvas {
+    border: 1px solid black;
+}
+.button {
+    display: inline-block;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #000000;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 1.2rem; 
+    text-align: center;
+}
+.button:hover {
+    opacity: 0.9;
+}
+.button-color1 {
+    background-color: #755e4f
+}
+.button-color2 {
+    background-color: #681c16
+}
+.button-color3 {
+    background-color: #be9c7a
+}
+.button-color4 {
+    background-color: #c8934c
+}
+.button-color5 {
+    background-color: #ca3a1c
+}
+.button-color6 {
+    background-color: #a80001
+}
+.button-color7 {
+    background-color: #bd8c5f
+}
+.button-color8 {
+    background-color: #b66b31
+}
+.button-color9 {
+    background-color: #a62c42
+}
+.invisible {
+    display: none;
+}
+.text-center {
+    text-align: center;
+}
+div {
+    margin: 10px;
+}
+.center-block {
+    display: block;
+    margin: auto;
+}
+label {
+    padding-right: 10px;
+    width: 25%;
+    vertical-align: top;
+    font: 16px 'Lucida Grande', sans-serif;
+}
