@@ -4,11 +4,19 @@
 <meta charset="UTF-8">
 <title> OpenCV.js Face Detection </title>
 <link rel="stylesheet" href="CSS/style.css">
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
 </head>
 <body translate="no">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <body>
-<div class="buttons" align="center">
+<div id="buttons" align="center">
     <button class="button button-color1" onclick="setHairColor(117, 94, 79)">Color1</button>
     <button class="button button-color2" onclick="setHairColor(22, 28, 104)">Color2</button>
     <button class="button button-color3" onclick="setHairColor(190, 156, 122)">Color3</button>
@@ -28,6 +36,7 @@
 </div>
 </body>
 <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
 <script>
   var Module = {
      wasmBinaryFile: 'opencv/opencv_js.wasm',

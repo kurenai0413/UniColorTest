@@ -18,10 +18,6 @@ let lowerYPaddingScale = 0.15
 
 let hairSeedScale      = 1.3
 
-let hairColorRed       = 0;
-let hairColorGreen     = 0;
-let hairColorBlue      = 0;
-
 function startCamera() {
   if (streaming) return;
 
@@ -62,8 +58,6 @@ let canvasInputCtx = null;
 let canvasBuffer = null;
 let canvasBufferCtx = null;
 
-let srcMat = null;
-
 function startVideoProcessing() {
   if (!streaming) {console.warn("Please startup your webcam");return;}
   stopVideoProcessing();
@@ -87,7 +81,7 @@ function startVideoProcessing() {
 }
 
 function processVideo() {
-  stats.begin();
+  //stats.begin();
   canvasInputCtx.drawImage(video, 0, 0, videoWidth, videoHeight);
   let imageData = canvasInputCtx.getImageData(0, 0, videoWidth, videoHeight);
   srcMat.data.set(imageData.data);
@@ -119,9 +113,7 @@ function processVideo() {
   {
     drawResults(canvasOutputCtx, faces, 'red', size);
   }
-
-  stats.end();
-
+  //stats.end();
   requestAnimationFrame(processVideo);
 }
 
@@ -154,31 +146,14 @@ function stopCamera() {
 }
 
 function initUI() {
-  stats = new Stats();
-  stats.showPanel(0);
-  document.getElementById('container').appendChild(stats.dom);
+  //stats = new Stats();
+  //stats.showPanel(0);
+  //document.getElementById('container').appendChild(stats.dom);
 }
 
 function opencvIsReady() {
   console.log('OpenCV.js is ready');
-  initUI();
+  //initUI();
   startCamera();
 }
-
-function setHairColor(redValue, greenValue, blueValue) {
-  hairColorRed   = redValue;
-  hairColorGreen = greenValue;
-  hairColorBlue  = blueValue;
-
-  alert("Color value: " + hairColorRed + ", " + hairColorGreen + ", " + hairColorBlue);
-}
-
-function testColorValuePrint() {
-  
-  let pixelValue = srcMat.ucharPtr(640, 360);
-  let redValue   = pixelValue[0];
-  let greenValue = pixelValue[1];
-  let blueValue  = pixelValue[2];
-
-  alert("Center value: " + redValue + ", " + greenValue + ", " + blueValue);
-}
+      //# sourceURL=pen.js
